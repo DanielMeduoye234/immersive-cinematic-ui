@@ -1,0 +1,132 @@
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  will-change: transform, filter;
+}
+
+.bgImage {
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+.centerContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 1.5rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.logo {
+  object-fit: contain;
+  user-select: none;
+  filter: drop-shadow(0 0 12px rgba(91, 140, 90, 0.5));
+}
+
+/* 🎬 Cinematic Main Title */
+.mainTitle {
+  font-family: var(--font-russo-one), sans-serif;
+  font-size: 4.4rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: transparent;
+  -webkit-text-stroke: 2px #5b8c5a;
+  text-shadow: 0 0 25px rgba(91, 140, 90, 0.5);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #5b8c5a;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 0 40px rgba(91, 140, 90, 0.9);
+}
+
+/* Cinematic Description */
+.description {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 1.1rem;
+  max-width: 680px;
+  line-height: 1.7;
+  color: #d9d9d9;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  margin-bottom: 2.4rem;
+}
+
+/* Adventure-style Button */
+.exploreBtn {
+  padding: 1rem 2.8rem;
+  background: transparent;
+  color: #5b8c5a;
+  border: 2px solid #5b8c5a;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 12px rgba(91, 140, 90, 0.4);
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 6px rgba(91, 140, 90, 0.6),
+      0 0 12px rgba(91, 140, 90, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(91, 140, 90, 0.8),
+      0 0 40px rgba(91, 140, 90, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(91, 140, 90, 0.6),
+      0 0 12px rgba(91, 140, 90, 0.3);
+  }
+}
+
+.exploreBtn:hover {
+  background: #5b8c5a;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(91, 140, 90, 0.8),
+    0 0 50px rgba(91, 140, 90, 0.5);
+  transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px #5b8c5a;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
