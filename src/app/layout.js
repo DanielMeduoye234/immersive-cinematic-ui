@@ -31,6 +31,34 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Preload cinematic assets for instant load */}
+        <link
+          rel="preload"
+          as="video"
+          href="/videos/bg-hero.mp4"
+          type="video/mp4"
+        />
+        <link
+          rel="preload"
+          as="video"
+          href="/videos/bg-waterfall.mp4"
+          type="video/mp4"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/landing-bg.jpg"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/logo.png"
+          type="image/png"
+        />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${russoOne.variable} ${poppins.variable}`}
       >
